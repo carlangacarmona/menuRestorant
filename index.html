@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Vegano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Sección de bebidas -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Elige algo para beber</h5>
+                <p>Disfruta de nuestra clásica selección de tragos.</p>
+            </div>
+            <div class="card-body">
+                <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                        <input class="form-check-input me-2" type="checkbox" value="2550" id="martini" data-name="Martini">
+                        <label class="form-check-label" for="martini">Martini</label>
+                    </div>
+                    <span>$2.550</span>
+                </div>
+                <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                        <input class="form-check-input me-2" type="checkbox" value="1370" id="cappuccino" data-name="Cappuccino">
+                        <label class="form-check-label" for="cappuccino">Cappuccino</label>
+                    </div>
+                    <span>$1.370</span>
+                </div>
+                <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                        <input class="form-check-input me-2" type="checkbox" value="1350" id="latte" data-name="Latte">
+                        <label class="form-check-label" for="latte">Latte</label>
+                    </div>
+                    <span>$1.350</span>
+                </div>
+                <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                        <input class="form-check-input me-2" type="checkbox" value="2290" id="mojito" data-name="Mojito">
+                        <label class="form-check-label" for="mojito">Mojito</label>
+                    </div>
+                    <span>$2.290</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección del menú -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Menú</h5>
+                <p>Disfruta de la mejor cocina italiana.</p>
+            </div>
+            <div class="card-body">
+                <!-- Insalata de riso -->
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <input class="form-check-input ms-3" type="checkbox" value="6750" id="insalataRiso" data-name="Insalata de Riso">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="titulo-card">Insalata de riso</h5>
+                                <p class="card-text">L'insalata di riso è un classico delle ricette estive. Veloce e facile da preparare l'insalata di riso si può insaporire con gli ingredienti più vari.</p>
+                                <p class="card-text"><strong>$6.750</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/img/insalata-de-riso.jpg" class="img-fluid rounded-end" alt="Insalata de riso">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insalata ai cipollotti -->
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <input class="form-check-input ms-3" type="checkbox" value="5990" id="insalataCipollotti" data-name="Insalata ai Cipollotti">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="titulo-card">Insalata ai cipollotti</h5>
+                                <p class="card-text">Più delicati delle cipolle, i cipollotti sono perfetti in insalata, sul pesce e sulla carne.</p>
+                                <p class="card-text"><strong>$5.990</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/img/insalata-ai-cipollotti.jpg" class="img-fluid rounded-end" alt="Insalata ai cipollotti">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insalata caprese -->
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <input class="form-check-input ms-3" type="checkbox" value="8250" id="insalataCaprese" data-name="Insalata Caprese">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="titulo-card">Insalata caprese</h5>
+                                <p class="card-text">Questo piatto è un culto della città partenopea dove la mozzarella è protagonista di moltissimi piatti.</p>
+                                <p class="card-text"><strong>$8.250</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/img/insalata-caprese.jpg" class="img-fluid rounded-end" alt="Insalata caprese">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de cuenta -->
+        <div class="card">
+            <div class="card-header">
+                <h5>Cuenta</h5>
+                <p>Esperamos que disfrute de su comida ¡Ciao!</p>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items-pedido">
+                        <!-- Los ítems seleccionados aparecerán aquí -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td id="precio-total">$0.000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/logica.js"></script>
+</body>
+</html>
